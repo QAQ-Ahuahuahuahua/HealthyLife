@@ -1,0 +1,4 @@
+@CHARSET "UTF-8";
+.contact_li{ 
+float:left; /* 往左浮动 */
+}
