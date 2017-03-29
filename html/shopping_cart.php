@@ -122,6 +122,10 @@
 						});
 						$('.close').click(function(){
 							var order_id = $(this).parent().parent().attr('id');
+							var total_p=parseFloat($('span.bottom_price_grand').text());
+							var price = $(this).parent().parent().find('span.per_price').text();
+							
+							var quantity = $(this).parent().parent().find('.qty_input').attr('value');
 							$.ajax({
 					 			type : "POST",
 						 		url : "order.php",
@@ -134,11 +138,13 @@
 						 		},
 						 		success: function(){
 									$('#'+order_id).remove();
+									total_p = total_p - parseFloat(price)*parseFloat(quantity);
 							 	},
 							 	error: function(err) {     
 					                alert("Error");     
 					            }     
 						 	});
+							$('.bottom_price').text(total_p.toFixed(2));
 	
 						});
 

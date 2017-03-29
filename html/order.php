@@ -25,7 +25,7 @@ if(isset($_POST['add_food'])){
 		}		
 	}else{
 		$quantity = 1;
-		$order_id = time().$user_id;
+		$order_id = time().$user_id.$food_id;
 		$mysqli = connect_mysql();
 		$sql = "INSERT INTO Shopping_cart(food_id,user_id,quantity,order_id) VALUES(?,?,?,?);";
 		if ($stmt = $mysqli->prepare($sql)) {
