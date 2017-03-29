@@ -22,7 +22,7 @@
 </head>
 <body>
 <?php include 'header.php';?>
-	<img src="images/recipes/cooking-1013455_1280.jpg" height="800 " width="1280" alt="First slide" class="img-responsive">
+	<div align="center"><img src="images/recipes/pic.jpg" height="800 " width="1280" alt="First slide" class="img-responsive" ></div>
 <div class="search-sec container" >
 	    <form action="recipes.php" method="get" role="search">
 	    <div class="row">

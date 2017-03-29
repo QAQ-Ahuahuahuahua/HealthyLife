@@ -3,8 +3,7 @@
   Header
 *******************************************************************************/
 #cafe{
-	margin: 100px 0 100px 0;
-	background-color: #000000; 
+	margin: 300px 0 100px 0;
 	color: white; 
 	text-align:center;
 }
@@ -18,11 +17,17 @@
 	margin:10px;
 	text-align:center;
 }
+#cafe img{
+	height: 50px;
+}
+#cafe a{
+	color : white;
+}
 .container_12{
-	background:black;
+	background:#272c21;
 }
 header{
-	background:black;
+	background:#272c21;
 	height:80px;
 	margin: 0px 0 0 0;
 	overflow: visible;
@@ -282,7 +287,7 @@ hgroup{
 *******************************************************************************/
 #main{
 	margin: 0px 0;
-	background:black;
+	background:#272c21;
 }
 #main.page-login{
 	margin: 43px 0 70px;
@@ -343,17 +348,10 @@ hgroup{
   Content
 *******************************************************************************/
 #shopping_table header{
-	background: black;
-	border-bottom: 8px solid black;
+	background: #272c21;
+	border-bottom: 8px solid #272c21;
 	height: auto;
 	margin: 150px 0 40px 0;
-	width: 100%;
-}
-#content header{
-	background: black;
-	border-bottom: 8px solid black;
-	height: auto;
-	margin: 0px 0 40px 0;
 	width: 100%;
 }
 h1.page_title{
@@ -1326,6 +1324,7 @@ select.bottom-index,
 #checkout_info{
 	margin-left: 0;
 	padding: 3px 0 0 0;
+	background:#272c21;
 }
 #checkout_info ul.checkout_list{
 	list-style: none!important;
@@ -1570,7 +1569,7 @@ ul.f_contact li+li+li{
 	text-decoration: underline;
 }
 .footer_navigation .newsletter-payments{
-	background: black;
+	background: #272c21;
 	height: 77px;
 	margin: 0;
 	padding: 0 12px;
@@ -1648,7 +1647,7 @@ ul.f_contact li+li+li{
 	padding: 22px 0 0 24px;
 }
 .footer_info{
-	background: black;
+	background: #272c21;
 	height: 90px;
 }
 .footer_info p.copyright{

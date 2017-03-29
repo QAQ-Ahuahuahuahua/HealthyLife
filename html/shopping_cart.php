@@ -117,7 +117,7 @@
 							 		qtys[order_id]= quantity;		
 								}
 							});
-							$('.bottom_price').text(total_p);
+							$('.bottom_price').text(total_p.toFixed(2));
 							alert("Success!");	
 						});
 						$('.close').click(function(){
@@ -164,17 +164,13 @@
                                 <form>
                                     <p>
                                         <strong>Country:</strong><sup>*</sup><br>
-                                        <select>
-                                            <option>United States</option>
-                                            <option>United States</option>
-                                        </select>
+                                        <input type="text" name="country" value="" placeholder="Please Enter Country">
+          
                                     </p>
                                     <p>
                                         <strong>State/Province:</strong><br>
-                                        <select class="bottom-index">
-                                            <option>Please select region, state or province</option>
-                                            <option>Please select region, state or province</option>
-                                        </select>
+                                        <input type="text" name="state" value="" placeholder="Please Enter Province">
+                                    
                                     </p>
                                     <p>
                                         <strong>Zip/Postal Code</strong><br>

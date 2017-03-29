@@ -25,8 +25,58 @@
             <p class="p1" >&nbsp;⊕ GRAINS [ONE] ---60g White Basmati Rice/ 60g Gluten-Free Potatoes</p >
             <p class="p1" >&nbsp; &nbsp; &nbsp; &nbsp;⊕ MEAT [ONE] ---1 Salmon Fillet（Lemon sauce)/1 Chicken Fillet（our own sause）</p >
             <p class="p1" >⊕ VEGETABLES [Two]--100g Carrots/100g Broccoli</p >
-            <p class="p1" >&nbsp; &nbsp;⊕ DRINKS [ONE] --- Orange Juice/ Lenom Tea [Optional]  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;＜（￣︶￣）＞ ♡</p >           
+            <p class="p1" >&nbsp; &nbsp;⊕ DRINKS [ONE] --- Orange Juice/ Lenom Tea [Optional]  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span id="quick_order"><a href="javascript:;"><img alt="" src="images/cafe/shopping_cart.png" title="Click to Buy All ">Click Buy ALL</a></span></p >           
    </div>
+   <?php 
+   if(isset($_SESSION['userID'])){?>
+   	<script type="text/javascript">
+		$('#quick_order').click(function(){
+			var user_id = "<?php echo $_SESSION['userID'];?>";
+			for(var i=0;i<4;i++){
+				
+				//var food_id = $(this).find("img").attr("name");
+				var food_id = 2*(i+1);
+				$.ajax({
+			 			type : "POST",
+				 		url : "order.php",
+				 		async: false,
+				 		//contentType: "application/json; charset=utf-8",     
+				 		dataType: "json",
+				 		data : {
+					 		food_id : food_id,
+					 		user_id : user_id,
+					 		add_food : true
+					 		//quantity : quantity,
+					 		//update : "true"
+				 		},
+				 		success: function(returndata){
+			 				var total_p = returndata[0]['total_price'];
+			 				$('.total_price').text(total_p.toFixed(2));
+			 				var order_list = returndata[1];
+							//total_p = total_p+parseFloat(price);
+							$('#food_list').empty();
+							for(var i=0;i<order_list.length;i++){
+								$('#food_list').append('<li id="'+order_list[i]['li_id']+'"><a  class="prev_cart"><div class="cart_vert"><img src="'+order_list[i]['img_url']+'"></div></a><div class="cont_cart"><h4>'+order_list[i]['food_name']+'</h4><div class="price"><span class="qantity">'+order_list[i]['quantity']+'</span> x <span>£ '+order_list[i]['price']+'</span></div></div></li>');
+							}
+									
+					 	},
+					 	error: function(err) {     
+			                alert("Error");     
+			            }     
+				 	});			
+			}
+			alert("Excited!");
+		});
+   	</script>
+   <?php }else{?>
+   	<script type="text/javascript">
+   		$('#quick_order').click(function(){
+   	   		alert("Please Login");
+   		});
+   	</script>
+   <?php }
+   ?>
+
    <div class="shopping_cart row">
                        <ul id="cart_nav">
                         <li>
@@ -36,7 +86,8 @@
                                 £<span class="total_price">0.0</span>
                             </a>
                             <ul class="cart_cont">
-                                <li id="food_list" class="no_border recently">Recently added item(s)</li>
+                                <li  class="no_border recently">Recently added item(s)</li>
+                                <div id="food_list">
                         <?php 
                         if(isset($_SESSION['userID'])){
                         	$user_id = $_SESSION['userID'];
@@ -64,7 +115,7 @@
                         	                         $('.total_price').text(total_p);
                         	                         </script>
                        <?php }?> 
-
+								</div>
                                 <li id ="check_part" class="no_border">
                                     <a href="shopping_cart.php" class="view_cart">View shopping cart</a>
                                     <a href="checkout.php" class="checkout">Procced to Checkout</a>
@@ -115,68 +166,34 @@
 					$('.buy_food').unbind('click').click(function(){
 						var user_id = "<?php echo $_SESSION['userID'];?>";
 						var food_id = $(this).find("img").attr("name");
-						var price = $(this).parent().find('span.food_price').text();
-						var food_name = $(this).parent().parent().find('h3.title').text();
-						var img_url = $(this).parent().parent().find('div.prev').find('img').attr('src');
-						var total_p=parseFloat($('.total_price').text());
-						var new_food=true;
-						var key_id = food_id+user_id;
-						$('#food_list').siblings().each(function(){
-							var text = $(this).attr('id');
-							if(text==key_id){
-								var quantity = $(this).find('span.qantity').text();
-								quantity++;
-						 		$.ajax({
-						 			type : "POST",
-							 		url : "order.php",
-							 		async: false,
-							 		//contentType: "application/json; charset=utf-8",     
-							 		//dataType: "json",
-							 		data : {
-								 		food_id : food_id,
-								 		user_id : user_id,
-								 		quantity : quantity,
-								 		update : "true"
-							 		},
-							 		success: function(){
-							 			
-										total_p = total_p+parseFloat(price);
-										alert("Success!");		
-								 	},
-								 	error: function(err) {     
-						                alert("Error");     
-						            }     
-							 	});			
-						 		$(this).find('span.qantity').text(quantity);			
-								new_food=false;
-								return false;
-							}
-						});
-						if(new_food==true){
-					 		$.ajax({
+						$.ajax({
 					 			type : "POST",
 						 		url : "order.php",
 						 		async: false,
 						 		//contentType: "application/json; charset=utf-8",     
-						 		//dataType: "json",
+						 		dataType: "json",
 						 		data : {
 							 		food_id : food_id,
 							 		user_id : user_id,
-							 		quantity : "1",
-							 		new_order : "true"
+							 		add_food : true
+							 		//quantity : quantity,
+							 		//update : "true"
 						 		},
 						 		success: function(returndata){
-									$('#food_list').after('<li id="'+returndata+'"><a  class="prev_cart"><div class="cart_vert"><img src="'+img_url+'"></div></a><div class="cont_cart"><h4>'+food_name+'</h4><div class="price"><span class="qantity">1</span> x <span>£ '+price+'</span></div></div></li>');
-									total_p = total_p+parseFloat(price);
-									alert("Success!");
+					 				var total_p = returndata[0]['total_price'];
+					 				$('.total_price').text(total_p.toFixed(2));
+					 				var order_list = returndata[1];
+									//total_p = total_p+parseFloat(price);
+									$('#food_list').empty();
+									for(var i=0;i<order_list.length;i++){
+										$('#food_list').append('<li id="'+order_list[i]['li_id']+'"><a  class="prev_cart"><div class="cart_vert"><img src="'+order_list[i]['img_url']+'"></div></a><div class="cont_cart"><h4>'+order_list[i]['food_name']+'</h4><div class="price"><span class="qantity">'+order_list[i]['quantity']+'</span> x <span>£ '+order_list[i]['price']+'</span></div></div></li>');
+									}
+									alert("Excited!");		
 							 	},
 							 	error: function(err) {     
 					                alert("Error");     
 					            }     
-						 	});		
-
-						}
-						$('.total_price').text(total_p.toFixed(2));
+						 	});									
 					
 				});
                   </script>

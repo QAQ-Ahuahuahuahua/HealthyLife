@@ -19,7 +19,23 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	font-family:inherit;
 	vertical-align:baseline;
 }
+.post-count {
+	font-family:'PT Sans Narrow', sans-serif;
+	color:#cad3e1;
+}
+body {
+	line-height:1;
+	color:#272c21;
+	background:#272c21;
+}
 
+.quote {
+	border-left:4px solid #cad3e1;
+	padding:7px 20px;
+	font-size:1em;
+	color:#cad3e1;
+	margin:20px 0;
+}
 .post-wrap {
 	position:relative;
 	padding-bottom:15px;
@@ -55,7 +71,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 .post-wrap a {
-	color:#5c7caf !important;
+	color:#cad3e1;
 	text-decoration:none;
 }
 
@@ -64,11 +80,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 .post-header {
-	font-family:'PT Sans Narrow', sans-serif;
-	font-size:3em;
+	font-family:'Arial', sans-serif;
+	font-size:32px;
 	color:white;
 	margin:6px 0 4px 74px;
-	text-shadow:1px 1px 0px #E0E0E0,2px 2px 0px #E0E0E0;
 }
 
 .post-info-wrap {
@@ -82,7 +97,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 .post-info-wrap a {
 	font-size:1.3em;
-	color:#5c7caf !important;
+	color:#cad3e1;
 	text-decoration:none;
 }
 
@@ -93,7 +108,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 .author-name {
 	font-size:1.3em !important;
-	color:#343434;
+	color:#cad3e1;
 }
 
 .post-descr {
@@ -112,7 +127,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 #comments-count {
 	font-family:"Arial",sans-serif;
-	color:#3a3a3a;
+	color:#cad3e1;
 	font-size:2em;
 	margin-bottom:16px;
 	border-bottom:1px dashed #d4d4d4;
@@ -275,10 +290,9 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 .content-right-header {
 	margin:30px 0 18px 20px;
-	font-family:"Oleo Script", cursive;
+	font-family:Arial;
 	padding-bottom:3px;
-	color:#BE3D3D;
-	text-shadow: 1px 1px 0px #c9c9c9, 2px 2px 0px #c9c9c9;
+	color:#b95959;
 	font-size:1.8em;
 }
 
@@ -296,7 +310,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 #content-right li>a {
 	font-family:'Droid Sans', sans-serif;
-	color:#3363af;
+	color:#cad3e1;
 	text-decoration:none;
 }
 
@@ -325,7 +339,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 .sidebar-desc {
-	color:#000 !important;
+	color:#cad3e1 !important;
 	font-size:0.6em !important;
 	font-style:italic;
 	line-height:16px;

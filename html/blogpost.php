@@ -19,7 +19,7 @@
 <body>
 
 	<?php include 'header.php';?>
-	<div class="container">
+	<div class="container blog_content">
 		<div class="row">
 			<div class="col-md-7 col-md-offset-1 left">
 			<div class="row blog">

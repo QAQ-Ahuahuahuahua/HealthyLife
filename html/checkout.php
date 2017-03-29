@@ -164,7 +164,7 @@
             <div class="container_12">
                
                 
-                <div class=" newsletter-payments">
+                <div class="newsletter-payments">
                     
                     
                     <div class="payments">

@@ -15,8 +15,8 @@ include 'config.php';?>
 		<div class="title">
 			<div class="container">
 				<div class="logo">
-					<h1 class="head"><a href="index.html">The Wonderful</a></h1>
-					<p>lets make a Life style</p>
+					<a href="index.php"><img src="images/the wonderful/logo1.png" height="150px"></a>
+					<p style="color:grey">lets make a Life style</p>
 				</div>
 				<div class="dwd-social-icons">
 					<a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
