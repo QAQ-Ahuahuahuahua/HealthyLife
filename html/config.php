@@ -6,7 +6,6 @@
  * Time: 16:19
  * Connect mysql
  */
-$baseUrl ='http://playground.eca.ed.ac.uk/~s1614491/';
 //Start session
 session_start();
 //Get redirect url
@@ -17,10 +16,10 @@ if(isset($_COOKIE['url'])){
 
 //Connect MySQK
 function connect_mysql(){
-    $server = "playground.eca.ed.ac.uk";
-    $db_username = "s1614491";
-    $db_password = "g7i823VKtR";
-    $database = "s1614491";
+    $server = "";
+    $db_username = "";
+    $db_password = "";
+    $database = "";
     $mysqli = new mysqli($server, $db_username, $db_password, $database);
     if ($mysqli->connect_errno) {
         printf("Connect failed: %s\n", $mysqli->connect_error);
