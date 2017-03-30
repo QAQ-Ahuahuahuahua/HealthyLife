@@ -64,7 +64,7 @@
 	<div class="row col-sm-12" id="about">
 	<p class="text-center"><img src="images/the wonderful/logo1.png" height="200px" style="padding-top: 40px"></p >
 	<br/>
-	<h3 style="color: #8BBBBF; padding-left: 50px; padding-right: 50px"> &nbsp; &nbsp; &nbsp; &nbsp; <strong>"The Wonderful"</strong> is an online chatting community for people who want to loss weight. It is a good plece for them to share tasty low calory meals, healthy lifestyles, or their successful diet experience to encourage others. Besides, we also provides take-out service. Giving people a chance to choose their own healthy meals online, and the tasty food would be delivered from the nearest "the wonderful cafe " just in minutes.</h3>
+	<h3 style="color: #8BBBBF; padding-left: 50px; padding-right: 50px"> &nbsp; &nbsp; &nbsp; &nbsp; <strong>"The Wonderful"</strong>  is an online wholesome food service in several fast-paced cities in Britain. Here you have a chance to choose your own healthy meals online, and the tasty food would be delivered from the nearest "the wonderful cafe " just in minutes. Besides, you could browse tasty low calories meals and healthy lifestyles to gain inspiration and encouragement here. Let us WON a brand new YOU in The Wonderful website now！</h3>
 	</div>
     
     <div class="row col-sm-12" style="padding:20px; padding-bottom: 80px">
@@ -90,10 +90,7 @@
             <p class="p1" style="font-size: 20px;"><br/>&nbsp; &nbsp;⊕ GRAINS [ONE] ---60g White Basmati Rice/ 60g Gluten-Free Potatoes</p >
             <p class="p1" style="font-size: 20px"><br/>&nbsp; &nbsp;⊕ MEAT [ONE] ---1 Salmon Fillet（Lemon sauce)/1 Chicken Fillet（our own sause）</p >
             <p class="p1" style="font-size: 20px"> <br/>&nbsp; &nbsp;⊕ VEGETABLES [Two]--100g Carrots/100g Broccoli</p >
-            <p class="p1" style="font-size: 20px"><br>&nbsp;⊕ DRINKS [ONE] --- Orange Juice/ Lenom Tea [Optional] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="cafe.php" title="cafe">ORDER NOW ＜（￣︶￣）＞ ♡</ a>
-
-
-<br／></p >
+            <p class="p1" style="font-size: 20px"><br>&nbsp;⊕ DRINKS [ONE] --- Orange Juice/ Lenom Tea [Optional] &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="cafe.php" title="cafe">ORDER NOW ＜（￣︶￣）＞ ♡</a></p >
        </div>
        
        <div class="row col-sm-12" style="background-color:#810B0D; color:#C56466; padding-top: 20px;  padding-bottom: 5px;">
@@ -206,25 +203,25 @@
 									<li><i class="fa fa-envelope-o pr-10"></i> &nbsp; wangyizi2016@163.com</li>
 								</ul>	
 								<ul  class="social-links" style="padding-bottom: 40px">
-									<li class="facebook contact_li col-sm-1"><a target="_blank" href=" "><i class="fa fa-facebook"></i></ a></li>
-									<li class="twitter contact_li col-sm-1"><a target="_blank" href="https://twitter.com/HtmlcoderMe"><i class="fa fa-twitter"></i></ a></li>
-									<li class="googleplus contact_li col-sm-1"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></ a></li>
-									<li class="skype contact_li col-sm-1"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></ a></li>
-									<li class="linkedin contact_li col-sm-1"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></ a></li>
-									<li class="youtube contact_li col-sm-1"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube"></i></ a></li>
-									<li class="flickr contact_li col-sm-1"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></ a></li>
-									<li class="pinterest contact_li col-sm-1"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></ a></li>
+									<li class="facebook contact_li col-sm-1"><a target="_blank" href=" "><i class="fa fa-facebook"></i></a></li>
+									<li class="twitter contact_li col-sm-1"><a target="_blank" href="https://twitter.com/HtmlcoderMe"><i class="fa fa-twitter"></i></a></li>
+									<li class="googleplus contact_li col-sm-1"><a target="_blank" href="http://plus.google.com"><i class="fa fa-google-plus"></i></a></li>
+									<li class="skype contact_li col-sm-1"><a target="_blank" href="http://www.skype.com"><i class="fa fa-skype"></i></a></li>
+									<li class="linkedin contact_li col-sm-1"><a target="_blank" href="http://www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+									<li class="youtube contact_li col-sm-1"><a target="_blank" href="http://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+									<li class="flickr contact_li col-sm-1"><a target="_blank" href="http://www.flickr.com"><i class="fa fa-flickr"></i></a></li>
+									<li class="pinterest contact_li col-sm-1"><a target="_blank" href="http://www.pinterest.com"><i class="fa fa-pinterest"></i></a></li>
 								</ul>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-6" style="padding: 30px">
 							<div class="footer-content">
-								<form role="form" id="footer-form" action="<?php echo $_SERVER['html/PHP_SELF'];?>" method="post">
+								<form role="form" id="footer-form" action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
 					    	  
 						    	  <div class="input-group">
  						    	      <span class="input-group-addon"><i class="fa fa-user"></i></span>
- 						    	      <input class="form-control" type="password" placeholder="Name">
+ 						    	      <input class="form-control" type="text" placeholder="Name">
 						    	  </div>  
 						    	  <br/>
 							      <div class="input-group margin-bottom-sm">
